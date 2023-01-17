@@ -49,12 +49,33 @@ public final class App {
         //  executorService.execute(mRI5);
         //  executorService.shutdown();
 
-        ExecutorService executorService = Executors.newCachedThreadPool();
-        executorService.execute(mRI1);
-        executorService.execute(mRI2);
-        executorService.execute(mRI3);
-        executorService.execute(mRI4);
-        executorService.shutdown();
+        // ExecutorService executorService = Executors.newCachedThreadPool();
+        // executorService.execute(mRI1);
+        // executorService.execute(mRI2);
+        // executorService.execute(mRI3);
+        // executorService.execute(mRI4);
+        // executorService.shutdown();
 
+        MyMessageInterface printString = (a) ->{
+            System.out.println(a);
+        };
+
+        MyRunnableInterface<Integer> addOperation = (a,b)->{
+             return a+b;
+        };
+         MyRunnableInterface<Integer> multiplyOperation = (a,b)->{
+             return a*b;
+         };
+         MyRunnableInterface<Integer> subtractOperation = (a,b)->{
+             return a-b;
+         };
+         MyRunnableInterface<String> concatenateString = (a,b)->{
+            return a+b;
+         };
+         System.out.println("addOperation   "+addOperation.process(1,1));
+         System.out.println("MultiplicationOperation   "+multiplyOperation.process(2,5));
+          System.out.println("SubtractOperation   "+subtractOperation.process(5,2));
+         System.out.println("Concatenate String"+concatenateString.process("The quick brownfox","jumps"));
+        printString.printMessage("Lets take a break");
     }
 }
