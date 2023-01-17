@@ -84,6 +84,7 @@ public final class App {
 
         List<Employee> employees = new ArrayList<Employee>();
          employees.add(new Employee(1,"Adam","Cheng",50000));
+         employees.add(new Employee(1,"Adam","Ang",50000));
         employees.add(new Employee(1,"Sada","Jude",30000));
         employees.add(new Employee(1,"Mary","Ann",40000));
          employees.add(new Employee(1,"James","Cheng",80000));
